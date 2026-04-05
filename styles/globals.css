@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --font-sans, --font-display, --font-mono are injected by next/font in layout.tsx */
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-stone-50 text-stone-800 font-sans;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .sanctuary-badge {
+    @apply inline-flex items-center gap-1.5 text-xs font-medium tracking-wide uppercase px-2.5 py-1 rounded-full;
+  }
+  .sanctuary-badge-performance {
+    @apply bg-blue-50 text-blue-700;
+  }
+  .sanctuary-badge-wellness {
+    @apply bg-emerald-50 text-emerald-700;
+  }
+  .sanctuary-badge-basecamp {
+    @apply bg-amber-50 text-amber-700;
+  }
+  .saving-pill {
+    @apply inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700;
+  }
+}
